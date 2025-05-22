@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AR Modell-Auswahl (ohne Marker)</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body { margin: 0; background: #000; font-family: sans-serif; }
+      #ui {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+        background: rgba(255,255,255,0.9);
+        padding: 10px;
+        border-radius: 8px;
+      }
+      model-viewer {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ui">
+      <label for="modellwahl">Modell:</label>
+      <select id="modellwahl">
+        <option value="A2HTC.glb">A²HTC (Präzisionsklimagerät)</option>
+        <option value="A2HTC_verrohrung.glb">A²HTC (mit Verrohrung)</option>
+        <option value="MakeupUnit_inkl_Exhaust.glb">Makeup-Unit (inkl. Exhaust)</option>
+      </select>
+    </div>
+
+    <model-viewer id="viewer"
+      src="A2HTC.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      environment-image="neutral"
+      exposure="1">
+    </model-viewer>
+
+    <script>
+      const selector = document.getElementById("modellwahl");
+      const viewer = document.getElementById("viewer");
+
+      selector.addEventListener("change", () => {
+        viewer.setAttribute("src", selector.value);
+      });
+    </script>
+  </body>
+</html>
