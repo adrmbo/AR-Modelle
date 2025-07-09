@@ -58,28 +58,52 @@
   </header>
 
   <div id="model-list"></div>
-
-  <script>
-    // Automatisches Indexieren: lädt Modelle aus einer externen JSON-Datei
-    fetch('model-index.json')
-      .then(response => response.json())
-      .then(models => {
-        const container = document.getElementById("model-list");
-        models.forEach(m => {
-          container.innerHTML += `
-            <div class="model-container">
-              <div class="model-title">\${m.title}</div>
-              <model-viewer src="\${m.file}"
-                            ar
-                            ar-modes="scene-viewer quick-look webxr"
-                            auto-rotate
-                            camera-controls
-                            loading="lazy">
-              </model-viewer>
-            </div>
-          `;
-        });
-      });
-  </script>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>AR-Modelle – Start</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+    .btn {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #0078d7;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      width: 250px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Start in die virtuelle Welt!</h1>
+    <a class="btn" href="projekte.html">Projekte</a>
+    <a class="btn" href="schnellsuche.html">AR Modell Schnellsuche</a>
+    <a class="btn" href="wie-funktionierts.html">Wie funktioniert’s?</a>
+  </div>
 </body>
+</html>
 </html>
