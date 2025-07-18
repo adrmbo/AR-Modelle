@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Projekt: A2HTC Präzisionsklimagerät</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    model-viewer {
+      width: 100%;
+      height: 500px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .info {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>A2HTC Präzisionsklimagerät</h1>
+
+  <div class="info">
+    <p><strong>Modellnummer:</strong> 90221036000</p>
+    <p><strong>Beschreibung:</strong>  
+    Das A2HTC ist ein Hochleistungs-Präzisionsklimagerät für Serverräume, Reinräume und Labore. Es kombiniert Luftentfeuchtung, Heizen, Kühlen und Feuchtigkeitssteuerung in einem kompakten System. Perfekt für industrielle Anwendungen mit konstanten Klimabedingungen.</p>
+  </div>
+
+  <h2>📐 Interaktives 3D-Modell (inkl. AR)</h2>
+
+  <model-viewer
+    src="modelle/a2htc.glb"
+    alt="3D-Modell des Präzisionsklimageräts A2HTC"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    environment-image="neutral"
+    auto-rotate
+    camera-controls
+    shadow-intensity="1">
+  </model-viewer>
+
+  <a class="back" href="projekte.html">← Zurück zur Projektübersicht</a>
+
+</body>
+</html>
